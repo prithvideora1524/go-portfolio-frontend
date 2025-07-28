@@ -1,0 +1,65 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter, transform;
+  transition: filter 300ms, transform 300ms;
+  animation: logo-spin 20s linear infinite;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+  transform: scale(1.12) rotate(-8deg);
+}
+
+/* Optional: unique hover for React logo, if needed */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  0%   { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+.card {
+  padding: 2em;
+  margin: 1rem auto;
+  background: rgba(30, 34, 66, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px #0003;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 32px #2226;
+  transform: translateY(-8px) scale(1.03);
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Animated button */
+button, .MuiButton-root {
+  transition: background 0.3s, color 0.3s, transform 0.2s cubic-bezier(0.4,2.2,0.2,1);
+}
+
+button:hover, .MuiButton-root:hover {
+  background: #232364 !important;
+  color: #61dafb !important;
+  transform: scale(1.045);
+}
+
+/* Social icon style (if you have) */
+.social-icon:hover {
+  transform: scale(1.12) rotate(-8deg);
+  filter: drop-shadow(0 0 6px #61dafb99);
+  transition: transform 0.2s cubic-bezier(0.4,2.2,0.2,1);
+}

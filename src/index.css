@@ -1,0 +1,72 @@
+/* Import the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  /* background: url("/generated-image.png") no-repeat center center fixed;
+  background-size: cover; */
+  background-color: #dbeafe; /* Light blue */
+  min-height: 100vh;
+  color: #20262f;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animated gradient overlay for background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background: rgba(252,254,255,0.08);
+  pointer-events: none;
+}
+
+
+@keyframes gradientmove {
+  0%   {background-position: 0% 50%;}
+  50%  {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Section styling */
+.section {
+  background: rgba(255,255,255,0.56);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 980px;
+  box-shadow: 0 8px 32px rgba(50,80,120,0.13);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Underline effect for nav links */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -4px;
+  height: 2px;
+  background: #61dafb;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+.nav-link:hover::after, .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Ease all interactive elements */
+button, a, div, input {
+  transition: all 0.3s cubic-bezier(0.4,2.2,0.2,1);
+}
